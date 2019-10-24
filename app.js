@@ -15,6 +15,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expSession({secret:'my top secret value', saveUninitialized:true, resave: false}));
 app.use(cookieParser());
+app.use('/views/css', express.static('css'))
+app.use('/home', home);
 
 
 //SERVER STARTUP

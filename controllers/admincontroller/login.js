@@ -2,11 +2,11 @@ var express = require('express');
 //var userModel = require('./../models/user-model');
 var router = express.Router();
 
-router.get('/', function(request, response){
-	response.render('login/index');
+router.get('/login', function(request, response){
+	response.render('admin/login');
 });
 
-router.post('/', function(request, response){
+/*router.post('/', function(request, response){
 	
 	var user = {
 		email: request.body.email,
@@ -22,6 +22,6 @@ router.post('/', function(request, response){
 		}
 	});
 
-});
+});*/
 
 module.exports = router;

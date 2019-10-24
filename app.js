@@ -5,7 +5,8 @@ var bodyParser = require('body-parser');
 var expSession = require('express-session');
 var cookieParser = require('cookie-parser');
 var home = require('./controllers/home-controller');
-var login = require('./controllers/admincontroller/login');
+var adminlogin = require('./controllers/admincontroller/login');
+var customerlogin = require('./controllers/customercontroller/login');
 var app = express();
 
 
@@ -18,7 +19,7 @@ app.use(expSession({secret:'my top secret value', saveUninitialized:true, resave
 app.use(cookieParser());
 //app.use('/views/css', express.static('css'))
 app.use('/home', home);
-app.use('/admin', login);
+app.use('/admin', adminlogin);
 
 
 //SERVER STARTUP

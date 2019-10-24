@@ -50,12 +50,12 @@ module.exports = {
 			callback(status);
 		});
 	},
-	/*delete: function(id, callback){
+	delete: function(id, callback){
 		var sql = "delete from  where id=?";
 		db.execute(sql, [id], function(status){
 			callback(status);
 		});
-	}*/
+	}
 }
 
 

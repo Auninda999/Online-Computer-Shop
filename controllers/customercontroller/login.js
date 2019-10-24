@@ -2,11 +2,11 @@ var express = require('express');
 
 var router = express.Router();
 
-router.get('/admin', function(request, response){
-	response.render('admin/login');
+router.get('/customer', function(request, response){
+	response.render('customer/login');
 });
 
-router.post('/admin', function(request, response){
+router.post('/customer', function(request, response){
 	
 	var user = {
 		email: request.body.email,

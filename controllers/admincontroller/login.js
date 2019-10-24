@@ -1,5 +1,5 @@
 var express = require('express');
-
+var admin_model = require("../../models/admin-model");
 var router = express.Router();
 
 router.get('/admin', function(request, response){
@@ -13,7 +13,7 @@ router.post('/admin', function(request, response){
 		password: request.body.password
 	};
 
-	userModel.validate(user, function(status){
+	admin_model.validate(user, function(status){
 		if(status){
 			response.cookie('email', request.body.email);
 			response.redirect('/home');

@@ -17,10 +17,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expSession({secret:'my top secret value', saveUninitialized:true, resave: false}));
 app.use(cookieParser());
-//app.use('/views/css', express.static('css'))
+app.use(express.static('views/home/img'))
 app.use('/home', home);
 app.use('/admin', adminlogin);
-
+app.use('/customer', customerlogin);
 
 //SERVER STARTUP
 app.listen(3000, function(){

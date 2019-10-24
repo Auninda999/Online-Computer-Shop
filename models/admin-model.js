@@ -51,7 +51,7 @@ module.exports = {
 		});
 	},
 	delete: function(id, callback){
-		var sql = "delete from  where id=?";
+		var sql = "delete from admin where id=?";
 		db.execute(sql, [id], function(status){
 			callback(status);
 		});
